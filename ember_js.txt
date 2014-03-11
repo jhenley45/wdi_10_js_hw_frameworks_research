@@ -1,0 +1,46 @@
+Ember.js, like AngularJS, is a Javascript web application framework based on
+the model-view-controller pattern. The main concepts of Ember include Models,
+Controllers, Views, Components, Templates, and Routes.
+
+Models
+
+Models in Ember are very similar to models in Rails and Angular. Their purpose
+is to help us hold and organize the date that we are going to use in our
+application (e.g. a user with name, job, and city attributes). One difference
+between models in Ember and Angular is that Ember subscribes to the Uniform
+Access Principle. What this means is that inside of an Ember template you can
+use the same syntax to access something that is computed or something that is
+a primitive. For example, if you have a function in your Ember model that
+strings together a users full name, you can call {{fullName}} from your
+template. Doing this in Angular would require you to include parens when
+accessing fullName, or {{fullName()}}. This may seem like a minute detail, but
+if you change a primitive value in an Angular to a computed value it requires
+you to add parens every time that value is called in a template.
+
+Controllers
+
+Controllers allow you to "decorate your models with display logic." They are
+useful in separating the data in your model from what you display on the
+screen. Like Rails, controllers in Ember inherit from another class. In this
+case it is ArrayController (when dealing with multiple records) and
+ObjectController (when dealing with a single model record).
+
+Views
+
+In Ember a view is what the user can see and interact with. They are used to add handling of user events, as well as to add reusable behavior to your templates. A view is associated with a controller, a template, and a route.
+
+Components
+
+Components are views that are completely isolated from their surrounding environment. This is great for reusing code in templates. All data used in components must be passed in. They are important because they allow you to define your own application-specific HTML tags and implement their behaviour using js.
+
+Templates
+
+Templates are used to build the application's HTML. They print the model data and are automatically updated whenever the model changes. Ember, like Angular, uses the Handlebars templating language.
+
+Routes
+
+Routes in ember are the URL representations of the objects in your application. The goal of the routes is to make the data in our models available in our controllers. This concept is very similar to routing in Rails as well as Angular.
+
+==================================
+
+One of the differences between Ember and Angular (as well as Backbone) is that Ember comes with more built-in features. This can be a drawback if you are creating a simple, one-page application. However, if you are building a robust application, Ember might be the right choice for you. A number of brand-name applications have been developed using ember, including Square, ZenDesk, and Groupon.
